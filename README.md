@@ -40,9 +40,3 @@
 
 直接用瀏覽器開啟 `index.html` 即可，不需要安裝任何套件。
 
-## 部署到 GitHub Pages
-
-1. 將專案推送到 GitHub repo 的 `main` 分支。
-2. 到 repo 的 **Settings → Pages**。
-3. Source 選擇 **Deploy from a branch**，Branch 選 `main`、資料夾選 `/ (root)`，按 Save。
-4. 約 1–2 分鐘後，網站會出現在 `https://〔帳號〕.github.io/〔repo 名稱〕/`。
