@@ -10,7 +10,7 @@
   });
   try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',syncIcon)}catch(e){}
 
-  var views=['home','projects','experience','skills','resume'];
+  var views=['home','projects','experience','skills'];
   var anchorView={featured:'home',contact:'home','h-solve':'home','h-how':'home','h-exp':'home','p-report':'projects','p-tax':'projects','p-notice':'projects','p-price':'projects','p-game':'projects','p-km':'projects'};
   function show(token,smooth){
     var view=views.indexOf(token)>=0?token:(anchorView[token]||'home');
@@ -31,13 +31,16 @@
     show(g,true);
   });
   window.addEventListener('hashchange',function(){show(location.hash.slice(1),true)});
-  show((location.hash||'#home').slice(1),false);
+  try{if('scrollRestoration' in history)history.scrollRestoration='manual'}catch(e){}
+  (function(){var t=(location.hash||'#home').slice(1);
+    if(anchorView[t]){var v=anchorView[t];try{history.replaceState(null,'','#'+v)}catch(e){}t=v}
+    show(t,false);window.scrollTo(0,0)})();
 
   var copied=document.getElementById('copied');
-  document.getElementById('copy-mail').addEventListener('click',function(){
-    var el=document.getElementById('mail'),t=el.textContent.trim();
+  document.querySelectorAll('.js-copy').forEach(function(btn){btn.addEventListener('click',function(){
+    var el=btn.parentElement.querySelector('#mail, .mail-m')||document.getElementById('mail'),t=el.textContent.trim();
     function fallback(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);copied.textContent='已選取 Email，請按 Ctrl+C 複製'}
-    try{navigator.clipboard.writeText(t).then(function(){copied.textContent='已複製 Email'},fallback)}catch(err){fallback()}
-  });
+    try{navigator.clipboard.writeText(t).then(function(){copied.textContent='已複製 Email';btn.textContent='已複製';setTimeout(function(){btn.textContent='複製'},1800)},fallback)}catch(err){fallback()}
+  })});
   document.getElementById('yr').textContent=new Date().getFullYear();
 })();

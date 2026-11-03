@@ -1,4 +1,4 @@
-# Elaine｜個人網站
+# I-Ling Cheng｜個人網站
 
 資料整合與流程自動化工程師的個人網站，介紹我的工作經歷、專案與技能。
 
@@ -32,7 +32,7 @@
 ├── js/
 │   └── main.js     # 頁面切換、深淺色切換、複製 Email
 ├── assets/
-│   └── resume.pdf  # 一頁式履歷（網站的下載履歷按鈕）
+│   └── I-Ling_Cheng_Resume.pdf  # 一頁式履歷（網站的下載履歷按鈕）
 └── README.md
 ```
 
