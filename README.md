@@ -1,18 +1,21 @@
 # I-Ling Cheng｜個人網站
 
-資料整合與流程自動化工程師的個人網站，介紹我的工作經歷、專案與技能。
+資料整合與流程自動化工程師的個人網站，介紹我的專案、工作經歷與技能。
 
-- **聯絡**：qawszyl@gmail.com
+- **網站**：https://zxcvb73400.github.io/Elaine_Resume/
+- **Email**：qawszyl@gmail.com
+- **LinkedIn**：https://www.linkedin.com/in/i-ling-cheng-668756364
 
 ## 網站內容
 
 | 頁面 | 內容 |
 | --- | --- |
-| 首頁 | 標語、快速了解、解決問題、怎麼做事、專案、工作經歷、聯絡我 |
-| 專案 | 每個專案的問題、做法與成果 |
-| 經歷 | 工作、接案、進修與學歷 |
-| 技能 | 技能分組、證照與訓練 |
-| 履歷 | 一頁式履歷 PDF，可線上閱讀或下載 |
+| 首頁 | 簡介、快速了解、我的工作流程、專案、工作經歷、技能、聯絡我 |
+| 專案 | 每個專案的問題、做法與成果，以及更多專案與 AI 協作方式 |
+| 經歷 | 工作、接案、進修與在學經歷 |
+| 技能 | 程式開發、資料庫與報表、自動化與 AI、開發與協作工具，以及證照與競賽 |
+
+一頁式履歷 PDF 可從網站右上角「下載履歷」取得。
 
 ## 技術
 
@@ -21,6 +24,7 @@
 - 深色／淺色模式切換，並跟隨系統設定
 - 以網址 hash 切換頁面（例如 `#projects`、`#experience`）
 - 字型：Google Fonts（IBM Plex Sans、IBM Plex Mono、Noto Sans TC）
+- 部署：GitHub Pages
 
 ## 檔案結構
 
@@ -32,11 +36,10 @@
 ├── js/
 │   └── main.js     # 頁面切換、深淺色切換、複製 Email
 ├── assets/
-│   └── I-Ling_Cheng_Resume.pdf  # 一頁式履歷（網站的下載履歷按鈕）
+│   └── I-Ling_Cheng_Resume.pdf  # 一頁式履歷（下載履歷按鈕）
 └── README.md
 ```
 
 ## 本機預覽
 
 直接用瀏覽器開啟 `index.html` 即可，不需要安裝任何套件。
-
