@@ -559,3 +559,5 @@ body{margin:0}img{max-width:100%}
 :root[data-theme="dark"] .glance,:root[data-theme="dark"] .fbox,:root[data-theme="dark"] #featured .proj,:root[data-theme="dark"] .proj,:root[data-theme="dark"] .skc,:root[data-theme="dark"] .cl,:root[data-theme="dark"] .cd .r1{background:#2A2F35;border-color:#3A4046}
 :root[data-theme="dark"] .rv{background:#22262B}
 :root[data-theme="dark"] .otb,:root[data-theme="dark"] .oitem,:root[data-theme="dark"] .olog{background:#2A2F35}
+/* 中等寬度：專案卡示意圖改放文字下方，避免表格被擠壓 */
+@media (max-width:1150px){.proj{grid-template-columns:1fr;gap:24px}.proj .rv{margin-top:0}}
