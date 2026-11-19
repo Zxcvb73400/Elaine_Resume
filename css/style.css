@@ -559,5 +559,18 @@ body{margin:0}img{max-width:100%}
 :root[data-theme="dark"] .glance,:root[data-theme="dark"] .fbox,:root[data-theme="dark"] #featured .proj,:root[data-theme="dark"] .proj,:root[data-theme="dark"] .skc,:root[data-theme="dark"] .cl,:root[data-theme="dark"] .cd .r1{background:#2A2F35;border-color:#3A4046}
 :root[data-theme="dark"] .rv{background:#22262B}
 :root[data-theme="dark"] .otb,:root[data-theme="dark"] .oitem,:root[data-theme="dark"] .olog{background:#2A2F35}
-/* 中等寬度：專案卡示意圖改放文字下方，避免表格被擠壓 */
-@media (max-width:1150px){.proj{grid-template-columns:1fr;gap:24px}.proj .rv{margin-top:0}}
+
+/* 經歷時間軸：重點數字、任職時長、收合更多 */
+.tl-points strong{font-weight:700;color:var(--ink)}
+.tl-date .tl-dur{display:block;margin-top:10px;font-size:13px;color:var(--muted)}
+.tl-points li.tl-more{padding-left:0}
+.tl-points li.tl-more::before{display:none}
+.tl-more summary{cursor:pointer;font-size:14px;color:var(--muted);list-style:none;display:inline-flex;align-items:center;gap:6px;padding:2px 0}
+.tl-more summary::-webkit-details-marker{display:none}
+.tl-more summary::before{content:"+";display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;border:1px solid var(--line);font-size:13px;line-height:1}
+.tl-more details[open] summary::before{content:"−"}
+.tl-more summary:hover{color:var(--ink)}
+.tl-more details>.tl-points{margin-top:6px}
+/* 手機：名字不斷行 */
+.brand{white-space:nowrap}
+@media (max-width:400px){.brand .dots{display:none}.nav-in{gap:8px}}
